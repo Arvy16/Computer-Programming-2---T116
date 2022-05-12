@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{FILE*fptr;
+
+    fptr=fopen("plops.txt","r");
+    if(fptr==NULL)
+    {
+    printf("Successful created!.");
+    return 0;
+    }
+    char line[500];
+    int i, lines;
+    printf("How many lines to be appended:");
+scanf("%d", &lines);
+
+if(lines<=5){
+for(int i = 0; i < 5; i++ ){
+    scanf("%s", &line);
+   fprintf(fptr, "%s\n", line);
+
+}
+
+    fclose(fptr);
+    return 0;
+    }
+    else{
+   printf("\nlimit to 5 only numbers");
+    }
+}
